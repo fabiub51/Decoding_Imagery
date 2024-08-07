@@ -89,9 +89,11 @@ sd_post_imag = std(mean(y,1));
 % function extracting decoding accuracies from confusion matrix of every participant 
 % then, one-sample t-tests are calculated for every condition (Does cluster
 % decode significantly above chance level?)
-% accounting for multiple comparisons: bonferroni = 0.05/3;
+% accounting for multiple comparisons: bonferroni = 0.05/3
 % returning statistics and p-values for every condition 
 %% ROI analysis - Stimulus Left S2 ROI
+
+bonferroni = 0.05/3 
 
 % Decoding ROI analysis
 for i = 1:length(subs)
